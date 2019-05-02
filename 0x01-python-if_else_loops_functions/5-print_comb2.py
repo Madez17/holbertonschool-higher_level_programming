@@ -1,4 +1,6 @@
 #!/usr/bin/python3
-for number in range(0, 99):
+for number in range(0, 100):
     if number <= 9:
-        print("{} {}".format(number, number), end='')
+        print("0{}, ".format(number), end='')
+    else:
+        print("{}, ".format(number), end='')
