@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+def safe_print_list(my_list=[], x=0):
+    try:
+        for iter1 in my_list(range(x)):
+            if iter1 <= x:
+                print('{:d}'.format(iter1))
+    except Exception as ex:
+        print(ex)
+        print("Error")
+        
