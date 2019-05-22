@@ -6,7 +6,6 @@ class Tree:
         self.__age = 0 #age tree atributte private
         self.__alive = True #alive is init in true atributte private
         self.__oranges = [] #oranges array tha save oranges - atributte private
-
     def dead(self): #return True if three is dead 
         if self.__alive: 
             return False
@@ -52,11 +51,11 @@ class Tree:
         return self.__oranges.pop() #return the orange
 
 class Orange: #New class orange
-     def __init__(self): #create a new instance that class orange
-         self.__diameter = 5 # diameter atributte private
+    def __init__(self): #create a new instance that class orange
+        self.__diameter = 5 # diameter atributte private
 
-     @property
-     def diameter(self):
-         print("Getter method diameter")
-         return self.__diameter
+    @property
+    def diameter(self):
+        print("Getter method diameter")
+        return self.__diameter
 
