@@ -1,5 +1,5 @@
+#!/usr/bin/python3
 class Tree:
-#Create a intance tha class Tree
     def __init__(self):
 	#create atributtes to calss:
         self.__height = 0 #height tree atributte private
@@ -15,7 +15,7 @@ class Tree:
     def any_oranges(self): #Method that verify if there are orange.
         if len(self.__oranges) > 0:
             return True
-        else
+        else:
             return False
 
     @property #DECORATOR to get height
@@ -23,20 +23,22 @@ class Tree:
         print("Getter method height")
         return self.__height
 
-    @height.setter(self, value): #setter the value to height
+    @height.setter #setter the value to height
+    def height(self):
         self.__height = value
 
-    @prototype #DECORATOR to get age
+    @property#DECORATOR to get age
     def age(self):
         print("Getter method age")
         return self.__age
 
-    @age.setter(self): #setter age 
+    @age.setter #setter age 
+    def age(self):
         self.__age += 1 #increase the age and conditions
         if self.__age > 80: #value if age is grather than 80 
             self.__alive = False 
-	if self.__age >= 10 and self.__alive: #value age is greather than or equal 10 and if the tree is alive
-	    self.create_oranges() #call method that create orange
+        if self.__age >= 10 and self.__alive: #value age is greather than or equal 10 and if the tree is alive
+            self.create_oranges() #call method that create orange
 
     @property #DECORATOR to get_alive
     def alive(self):
