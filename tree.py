@@ -61,6 +61,7 @@ class Orange: #New class orange
         return self.__diameter
 
 tree  =  Tree()
+print(tree.height(250))
 print(tree.dead())
 print(tree.any_oranges())
 while (tree.any_oranges() == False):
