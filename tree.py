@@ -31,9 +31,8 @@ class Tree:
     def age(self):
         print("Getter method age")
         return self.__age
-
-    @age.setter #setter age 
-    def age(self):
+    
+    def grow(self):
         self.__age += 1 #increase the age and conditions
         if self.__age > 80: #value if age is grather than 80 
             self.__alive = False 
@@ -60,4 +59,15 @@ class Orange: #New class orange
     def diameter(self):
         print("Getter method diameter")
         return self.__diameter
+
+tree  =  Tree()
+print(tree.dead())
+print(tree.any_oranges())
+while (tree.any_oranges() == False):
+    tree.grow()
+i = 0
+while (tree.any_oranges() == True):
+    tree.pick_up()
+    i += 1
+print(i)
 
