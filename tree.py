@@ -7,7 +7,7 @@ class Tree:
         self.__alive = True #alive is init in true atributte private
         self.__oranges = [] #oranges array tha save oranges - atributte private
     def dead(self): #return True if three is dead 
-        if self.__alive: 
+        if self.__alive:
             return False
         else:
             return True
