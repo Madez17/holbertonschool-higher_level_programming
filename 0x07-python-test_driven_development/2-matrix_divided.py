@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 
 """Module matrix_divided
-Documentation as specified by how can add two numbers
-and the diferents conditions when you pass paramethers and this validate when
-have a error.
+Documentation as specified by how can divided a matrix that receive how parameter, and receive other parameterthat is div it is the number by its goin to be divided the elements of the list of the matrix.
 
 """
 
