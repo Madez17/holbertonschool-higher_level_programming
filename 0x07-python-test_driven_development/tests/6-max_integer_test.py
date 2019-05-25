@@ -14,8 +14,7 @@ class TestMaxInteger(unittest.TestCase):
   def test_upper(self):
       self.assertEqual(max_integer([0, 0, 0]), 0)
   def test_upper(self):
-      self.assertEqual(max_integer([]), None) 
-
- 
+      self.assertEqual(max_integer([]), None)
+  
 if __name__ == '__main__':
     unittest.main()

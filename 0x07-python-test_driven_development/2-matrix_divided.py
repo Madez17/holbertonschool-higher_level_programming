@@ -1,12 +1,21 @@
 #!/usr/bin/python3
 
-"""
+"""Module matrix_divided
+Documentation as specified by how can add two numbers
+and the diferents conditions when you pass paramethers and this validate when
+have a error.
+
 """
 
 
 def matrix_divided(matrix, div):
 
-    """
+    """Example function matrix_divided.
+    Args:
+        matrix: First parameter.
+        div: Second parameter.
+    Return:
+        return new matrix.
     """
 
     matrix_new = []
