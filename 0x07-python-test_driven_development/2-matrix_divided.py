@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 
 """Module matrix_divided
-Documentation as specified by how can divided a matrix that receive how parameter, and receive other parameterthat is div it is the number by its goin to be divided the elements of the list of the matrix.
-
+Documentation as specified by how can divided a matrix.
 """
 
 
@@ -16,6 +15,7 @@ def matrix_divided(matrix, div):
         return new matrix.
     """
 
+    sizeRow = "Each row of the matrix must have the same size"
     matrix_new = []
     for list in matrix:
         list_new = []
@@ -24,7 +24,7 @@ def matrix_divided(matrix, div):
                 raise TypeError('matrix must be a matrix (list of lists) \
  of integers/floats')
             if len(list) != len(matrix[0]):
-                raise TypeError('Each row of the matrix must have the same size')
+                raise TypeError(sizeRow)
             if type(div) != int and type(div) != float:
                 raise TypeError('div must be a number')
             if div == 0:
