@@ -1,11 +1,24 @@
 #!/usr/bin/python3
+
+"""Module add_integer
+Documentation as specified by how can add two numbers
+and the diferents conditions when you pass paramethers and this validate when
+have a error.
+
+"""
+
+
 def add_integer(a, b=98):
-    if type(a) is float or type(b) is float:
-        a = int(a)
-        b = int(b)
-    elif type(a) != int:
-        raise TypeError ('a must be an integer') 
-    elif type(b) != int:
-        raise TypeError ('b must be an integer') 
-    return a + b
-    
+
+    """Example function add integer.
+    Args:
+        a: First parameter.
+        b: Second parameter.
+    Return:
+        return value. a + b.
+    """
+    if type(a) != int and type(a) != float:
+        raise TypeError('a must be an integer')
+    if type(b) != int and type(b) != float:
+        raise TypeError('b must be an integer')
+    return int(a + b)
