@@ -1,0 +1,93 @@
+The ``2-matrix_divided.py`` module
+==================
+
+Using ``matrix_divided``
+-------------------
+
+This test text file in for function matrix_divided. First import
+``factorial`` from the ``2-matrix_divided`` module:
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Now use it:
+    >>> matrix = [[1, 2, 3], [5, 3, 4]]
+    >>> matrix_divided(matrix, 3)
+    [[0.33, 0.67, 1.0], [1.67, 1.0, 1.33]]
+
+    >>> matrix = [[1, 2, -3], [5, -3, 4]]
+    >>> matrix_divided(matrix, 3)
+    [[0.33, 0.67, -1.0], [1.67, -1.0, 1.33]]
+
+    >>> matrix = [[1.5, 2, -3], [5, -3, 4]]
+    >>> matrix_divided(matrix, 3)
+    [[0.5, 0.67, -1.0], [1.67, -1.0, 1.33]]
+
+    >>> matrix = [[1.5, 2, 3], [5, 83.6, 4]]
+    >>> matrix_divided(matrix, 4)
+    [[0.38, 0.5, 0.75], [1.25, 20.9, 1.0]]
+
+    >>> matrix = [[], [5, 83.6, 4]]
+    >>> matrix_divided(matrix, 4)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+    
+    >>> matrix = [[1, 3, 6, 8], [5, 83.6, 4]]
+    >>> matrix_divided(matrix, 4)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+    >>> matrix = [[1, 3, 6, 8], [5, 83.6, 4, 'm']]
+    >>> matrix_divided(matrix, 6)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists)  of integers/floats
+    
+    >>> matrix = [["madez",2 ], [5, 83.6]]
+    >>> matrix_divided(matrix, 6)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists)  of integers/floats
+
+    >>> matrix = [[], []]
+    >>> matrix_divided(matrix, 6)
+    [[], []]
+
+    >>> matrix = [[2], [54]]
+    >>> matrix_divided(matrix, 7)
+    [[0.29], [7.71]]
+
+    >>> matrix = [[None], [54]]
+    >>> matrix_divided(matrix, 7)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists)  of integers/floats
+
+    >>> matrix = [[2.2, 4, 98], [54, 5.6, 7], [1, 3, 5]]
+    >>> matrix_divided(matrix, 7)
+    [[0.31, 0.57, 14.0], [7.71, 0.8, 1.0], [0.14, 0.43, 0.71]]
+
+    >>> matrix = [[2.2, 4, 98]]
+    >>> matrix_divided(matrix, 7)
+    [[0.31, 0.57, 14.0]]
+
+    >>> matrix = [[2.2, 4, 98], [54, 5.6, 7]]
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+
+    >>> matrix = [[2.2, 4, 98], [54, 5.6, 7]]
+    >>> matrix_divided(matrix, 1.2)
+    [[1.83, 3.33, 81.67], [45.0, 4.67, 5.83]]
+
+    >>> matrix = [[2.2, 4, 98], [54, 5.6, 7]]
+    >>> matrix_divided(matrix, 'g')
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+    >>> matrix = [[2.2, 4, 98], [54, 5.6, 7]]
+    >>> matrix_divided(matrix, )
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+    >>> matrix = [[2.2, 4, 98], [54, 5.6, 7]]
+    >>> matrix_divided(matrix, None)
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
