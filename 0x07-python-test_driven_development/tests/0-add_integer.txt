@@ -11,11 +11,17 @@ This test text file in for function add_integer. First import
 
 Now use it:
 
+   >>> add_integer(3, )
+   101
+
    >>> add_integer(8, 7)
    15
 
    >>> add_integer(-8, -7)
    -15
+
+   >>> add_integer(0, )
+   98
 
    >>> add_integer(-9, 7)
    -2
