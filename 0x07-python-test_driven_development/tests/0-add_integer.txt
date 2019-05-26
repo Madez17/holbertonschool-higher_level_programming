@@ -10,6 +10,7 @@ This test text file in for function add_integer. First import
     >>> add_integer = __import__('0-add_integer').add_integer
 
 Now use it:
+
    >>> add_integer(8, 7)
    15
 
@@ -55,6 +56,10 @@ Now use it:
    Traceback (most recent call last):
    TypeError: add_integer() missing 1 required positional argument: 'a'
 
-   >>> add_integer(4, float('nan'))
+   >>> add_integer(float(2e3343), float(12e356))
+   Traceback (most recent call last):
+   OverflowError: cannot convert float infinity to integer
+
+   >>> add_integer(float('nan'), 4)
    Traceback (most recent call last):
    ValueError: cannot convert float NaN to integer
