@@ -85,8 +85,6 @@ Now use it:
     >>> matrix_divided(matrix, )
     Traceback (most recent call last):
     TypeError: matrix_divided() missing 1 required positional argument: 'div'
-
-
     >>> matrix = [[2.2, 4, 98], [54, 5.6, 7]]
     >>> matrix_divided(matrix, None)
     Traceback (most recent call last):
@@ -107,3 +105,13 @@ Now use it:
     >>> matrix = [[2.2, 4, 98], [54, 5.6, 7]]
     >>> matrix_divided(matrix, float('inf'))
     [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+    >>> matrix = [[2.2, 4, 98], [54, 5.6, 7]]
+    >>> matrix_divided( )
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+    >>> matrix = [[2.2, 4, 98], [54, 5.6, 7]]
+    >>> matrix_divided('alias', 'emef')
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists)  of integers/floats
