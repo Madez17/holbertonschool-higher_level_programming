@@ -1,12 +1,26 @@
-The ``5-text_identation.py`` module
+The ``5-text_indentation.py`` module
 ==================
 
-Using ``text_identation``
+Using ``text_indentation``
 -------------------
 
-This test text file in for function text_identation. First import
-``factorial`` from the ``5-text_identation`` module:
+This test text file in for function text_indentation. First import
+``factorial`` from the ``5-text_indentation`` module:
 
-    >>> text_identation = __import__('5-text_identation').text_identation
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 Now use it:
+
+    >>> text = ('Madez')
+    text_indentation(text)
+    Madez>>> 
+
+    >>> text = (67)
+    text_indentation(text)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text = (98.4)
+    text_indentation(text)
+    Traceback (most recent call last):
+    TypeError: text must be a string
