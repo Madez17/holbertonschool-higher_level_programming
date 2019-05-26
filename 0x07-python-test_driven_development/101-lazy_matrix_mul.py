@@ -22,4 +22,4 @@ def lazy_matrix_mul(m_a, m_b):
 
     """
     result = np.dot(m_a, m_b)
-    print(result)
+    return result
