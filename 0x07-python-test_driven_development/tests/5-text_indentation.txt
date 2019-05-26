@@ -1,0 +1,12 @@
+The ``5-text_identation.py`` module
+==================
+
+Using ``text_identation``
+-------------------
+
+This test text file in for function text_identation. First import
+``factorial`` from the ``5-text_identation`` module:
+
+    >>> text_identation = __import__('5-text_identation').text_identation
+
+Now use it:
