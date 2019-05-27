@@ -58,6 +58,7 @@ class Rectangle(object):
         return perimeter
 
     def __str__(self):
+        """Method str - return string"""
         if self.__width == 0 or self.__height == 0:
                 return ''
         result = ''
