@@ -50,10 +50,9 @@ class Rectangle(object):
 
     def perimeter(self):
         """area perimeter"""
+        if self.width == 0 or self.height == 0:
+            return 0
         ph = self.__height * 2
         pw = self.__width * 2
         perimeter = ph + pw
-        if self.__width != 0 or self.__height != 0:
-                return perimeter
-        else:
-                return 0
+        return perimeter
