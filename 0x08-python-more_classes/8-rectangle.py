@@ -77,9 +77,9 @@ class Rectangle(object):
         """static method
         Argumets 2
         """
-        if is not isinstance(rect_1, Rectangle):
+        if isinstance(rect_1, Rectangle) is False:
             raise TypeError('rect_1 must be an instance of Rectangle')
-        if is not isinstance(rect_2, Rectangle):
+        if isinstance(rect_2, Rectangle) is False:
             raise TypeError('rect_2 must be an instance of Rectangle')
         if rect_1.area() <= rect_2.area():
             return rect_2
