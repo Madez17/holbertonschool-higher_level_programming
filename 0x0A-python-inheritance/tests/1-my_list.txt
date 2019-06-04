@@ -1,0 +1,25 @@
+The ``1-my_list.py`` module
+==================
+
+Using ``1-my_list``
+-------------------
+
+This test text file in for function 1-my_list. First import
+``factorial`` from the ``1-my_list`` module:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Now use it:
+
+    >>> my_list = MyList()
+    >>> my_list.append('t')
+    >>> my_list.append(4)
+    >>> my_list.append('g')
+    >>> my_list.append('holbi')
+    >>> print(my_list)
+    ['t', 4, 'g', 'holbi']
+    >>> my_list.print_sorted()    
+    Traceback (most recent call last):
+    TypeError: unorderable types: int() < str()
+    >>> print(my_list)
+    ['t', 4, 'g', 'holbi']
