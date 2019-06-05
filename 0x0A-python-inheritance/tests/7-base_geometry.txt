@@ -1,0 +1,29 @@
+The ``7-base_geometry.py`` module
+==================
+
+Using ``7-base_geometry``
+-------------------
+
+This test text file in for function 7-base_geometry. First import
+``factorial`` from the ``7-base_geometry`` module:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Now use it:
+
+    >>> bg = BaseGeometry()
+    >>> 
+    >>> bg.integer_validator("my_int", 12)
+    >>> bg.integer_validator("width", 89)
+
+    >>> bg.integer_validator("my_int", -1)
+    Traceback (most recent call last):
+    ValueError: my_int must be greater than 0
+
+    >>> bg.integer_validator("my_int", 0)
+    Traceback (most recent call last):
+    ValueError: my_int must be greater than 0
+
+    >>> bg.integer_validator("my_int", None)
+    Traceback (most recent call last):
+    TypeError: my_int must be an integer
