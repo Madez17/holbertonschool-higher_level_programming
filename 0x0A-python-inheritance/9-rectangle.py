@@ -34,7 +34,8 @@ class Rectangle(BaseGeometry):
         self.__height = height
         BaseGeometry.integer_validator(self, "height", height)
         BaseGeometry.integer_validator(self, "width", width)
-        print("[Rectangle] {}/{}".format(width, height))
+    def __str__(self):
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
 
     def area(self):
         """Module area
