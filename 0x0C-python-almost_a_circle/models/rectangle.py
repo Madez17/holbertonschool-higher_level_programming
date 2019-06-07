@@ -13,6 +13,10 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def area(self):
+        """ Class constructor area"""
+        return self.width * self.height
+
     @property
     def width(self):
         """get width"""
