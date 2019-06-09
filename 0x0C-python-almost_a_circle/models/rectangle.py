@@ -13,10 +13,9 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-
     def __str__(self):
-        """ """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, 
+        """ Method str show objects """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
                                                        self.width, self.height)
 
     def display(self):
@@ -47,7 +46,7 @@ class Rectangle(Base):
     def height(self):
         """Get height"""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """setter value height """
