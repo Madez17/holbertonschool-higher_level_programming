@@ -13,6 +13,17 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+
+    def __str__(self):
+        """ """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, 
+                                                       self.width, self.height)
+
+    def display(self):
+        """Class constructor actualization reactangle"""
+        for iter1 in range(self.__height):
+            print(self.__width * '#')
+
     def area(self):
         """ Class constructor area"""
         return self.width * self.height
