@@ -30,7 +30,7 @@ class Rectangle(Base):
 
             else:
                 self.y = args[iter1]
-        if kwargs is not None:
+        if not args:
             for key, value in kwargs.items():
                 if key == 'id':
                     Base.__init__(self, value)
