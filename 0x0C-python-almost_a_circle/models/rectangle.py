@@ -20,7 +20,9 @@ class Rectangle(Base):
 
     def display(self):
         """Class constructor actualization reactangle"""
+        print(self.y * '\n', end='')
         for iter1 in range(self.__height):
+            print(self.x * ' ', end='')
             print(self.__width * '#')
 
     def area(self):
