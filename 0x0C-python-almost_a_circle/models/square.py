@@ -16,20 +16,6 @@ class Square(Rectangle):
         del nw_dictionary['height']
         return nw_dictionary
 
-    def update(self, *args, **kwargs):
-        """update square public method"""
-        if len(args) > 2:
-            args = list(args)
-            args.insert(2, args[1])
-
-        cpy_kw = kwargs.copy()
-
-        for key, value in cpy_kw.items():
-            if key == 'size':
-                kwargs[key] = value
-                kwargs[key] = value
-        Rectangle.update(self, *args, **kwargs)
-
     def __str__(self):
         """Method str show objects"""
         return ("[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
@@ -45,3 +31,18 @@ class Square(Rectangle):
         """Setter size value """
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """update square public method"""
+        if len(args) > 2:
+            args = list(args)
+            args.insert(2, args[1])
+
+        cpy_kw = kwargs.copy()
+
+        for key, value in cpy_kw.items():
+            if key == 'size':
+                kwargs[key] = value
+                kwargs[key] = value
+        Rectangle.update(self, *args, **kwargs)
+
