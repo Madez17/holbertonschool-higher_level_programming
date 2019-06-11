@@ -13,6 +13,16 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+
+    def to_dictionary(self):
+        nwDictionary = {}
+        nwDictionary['id'] = self.id
+        nwDictionary['width'] = self.width
+        nwDictionary['height'] = self.height
+        nwDictionary['x'] = self.x
+        nwDictionary['y'] = self.y
+        return nwDictionary
+
     def update(self, *args, **kwargs):
         """Constructor update class rectangle"""
         for iter1 in range(len(args)):
