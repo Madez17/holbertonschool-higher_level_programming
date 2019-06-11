@@ -20,7 +20,7 @@ class Base(object):
         """ Method convert to json format json_string"""
 
         if json_string is None or json_string == 0:
-            return "[]"
+            return []
         else:
             return json.loads(json_string)
 
