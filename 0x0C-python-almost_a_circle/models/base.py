@@ -15,6 +15,18 @@ class Base(object):
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @classmethod
+    def create(cls, **dictionary):
+        """ Create new object"""
+        args = []
+        if cls.__name__ == "Rectangle":
+            newObj = cls(6, 8)
+        else:
+            newObj = cls(7)
+
+        newObj.update(*args, **dictionary)
+        return newObj 
+
     @staticmethod
     def from_json_string(json_string):
         """ Method convert to json format json_string"""
