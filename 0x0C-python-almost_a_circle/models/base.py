@@ -17,7 +17,6 @@ class Base(object):
 
     @classmethod
     def create(cls, **dictionary):
-        """ method create a new object"""
         args = []
         if cls.__name__ == "Rectangle":
             newObj = cls(6, 8)
