@@ -15,6 +15,7 @@ class Square(Rectangle):
                                                   self.width))
 
     def to_dictionary(self):
+        """constructor To dictionary """
         nw_dictionary = Rectangle.to_dictionary(self)
         nw_dictionary['size'] = nw_dictionary['width']
         del nw_dictionary['width']
