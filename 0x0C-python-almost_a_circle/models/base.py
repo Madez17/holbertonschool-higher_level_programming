@@ -19,12 +19,12 @@ class Base(object):
     def create(cls, **dictionary):
         args = []
         if cls.__name__ == "Rectangle":
-            newObj = cls(1, 1)
+            dummy = cls(1, 1)
         else:
-            newObj = cls(1)
+            dummy = cls(1)
 
-        newObj.update(*args, **dictionary)
-        return newObj
+        dummy.update(*args, **dictionary)
+        return dummy
 
     @staticmethod
     def from_json_string(json_string):
