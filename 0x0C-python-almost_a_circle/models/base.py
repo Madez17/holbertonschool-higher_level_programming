@@ -17,6 +17,7 @@ class Base(object):
 
     @classmethod
     def create(cls, **dictionary):
+        """ Create new object """
         args = []
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
