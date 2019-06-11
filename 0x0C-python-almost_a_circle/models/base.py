@@ -25,7 +25,7 @@ class Base(object):
             newObj = cls(7)
 
         newObj.update(*args, **dictionary)
-        return newObj 
+        return newObj
 
     @staticmethod
     def from_json_string(json_string):
