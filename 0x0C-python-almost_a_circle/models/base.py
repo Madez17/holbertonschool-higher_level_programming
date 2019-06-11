@@ -28,10 +28,15 @@ class Base(object):
         """Class method save objects in new file"""
 
         file_saved_obj = cls.__name__ + '.json'
+
         newList = []
 
-        for obj in list_objs:
-            newList.append(obj.to_dictionary())
-
         with open(file_saved_obj, mode='w', encoding='UTF8') as MyFile:
+           
+            if list_objs is None:
+                pass
+
+            else:
+                for obj in list_objs:
+                    newList.append(obj.to_dictionary())
             MyFile.write(Base.to_json_string(newList))
