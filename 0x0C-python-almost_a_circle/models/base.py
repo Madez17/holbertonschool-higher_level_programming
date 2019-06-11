@@ -32,7 +32,7 @@ class Base(object):
         newList = []
 
         with open(file_saved_obj, mode='w', encoding='UTF8') as MyFile:
-           
+
             if list_objs is None:
                 pass
 
