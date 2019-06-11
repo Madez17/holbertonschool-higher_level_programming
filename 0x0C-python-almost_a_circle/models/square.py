@@ -41,11 +41,10 @@ class Square(Rectangle):
         if len(args) > 2:
             args = list(args)
             args.insert(2, args[1])
-
+        
         cpy_kw = kwargs.copy()
-
         for key, value in cpy_kw.items():
             if key == 'size':
-                kwargs[key] = value
-                kwargs[key] = value
+                kwargs["width"] = value
+                kwargs["height"] = value
         Rectangle.update(self, *args, **kwargs)
