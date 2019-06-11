@@ -9,17 +9,17 @@ class Square(Rectangle):
         """Class construct object """
         super().__init__(size, size, x, y, id)
 
+    def __str__(self):
+        """Method str show objects"""
+        return ("[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                  self.width))
+
     def to_dictionary(self):
         nw_dictionary = Rectangle.to_dictionary(self)
         nw_dictionary['size'] = nw_dictionary['width']
         del nw_dictionary['width']
         del nw_dictionary['height']
         return nw_dictionary
-
-    def __str__(self):
-        """Method str show objects"""
-        return ("[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
-                                                  self.width))
 
     @property
     def size(self):
@@ -45,4 +45,3 @@ class Square(Rectangle):
                 kwargs[key] = value
                 kwargs[key] = value
         Rectangle.update(self, *args, **kwargs)
-
