@@ -16,6 +16,15 @@ class Base(object):
             self.id = Base.__nb_objects
 
     @staticmethod
+    def from_json_string(json_string):
+        """ Method convert to json format json_string"""
+
+        if json_string is None or json_string == 0:
+            return "[]"
+        else:
+            return json.dumps(json_string)
+
+    @staticmethod
     def to_json_string(list_dictionaries):
         """ Static method to convert a list to string """
         if list_dictionaries is None or list_dictionaries == 0:
