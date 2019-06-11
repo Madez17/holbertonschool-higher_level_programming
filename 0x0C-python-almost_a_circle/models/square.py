@@ -9,6 +9,13 @@ class Square(Rectangle):
         """Class construct object """
         Rectangle.__init__(self, size, size, x, y, id)
 
+    def to_dictionary(self):
+        nw_dictionary = Rectangle.to_dictionary(self)
+        nw_dictionary['size'] = nw_dictionary['width']
+        del nw_dictionary['width']
+        del nw_dictionary['height']
+        return nw_dictionary
+
     def update(self, *args, **kwargs):
         """update square public method"""
         if len(args) > 2:
