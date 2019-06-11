@@ -9,7 +9,6 @@ class Base(object):
 
     """def from_json_string(json_string):"""
 
-
     @staticmethod
     def to_json_string(list_dictionaries):
         """ Static method to convert a list to string """
@@ -21,19 +20,15 @@ class Base(object):
     @classmethod
     def save_to_file(cls, list_objs):
         """Class method save objects in new file"""
-        
         file_saved_obj = cls.__name__ + '.json'
 
         """if list_objs is None:
             with open(file_saved_obj, mode='w', encoding='UTF8') as MyFile
                 MyFile.write(json.dumps())"""
-
         newList = []
-
         for obj in list_objs:
             newList.append(obj.to_dictionary())
 
-       
         with open(file_saved_obj, mode='w', encoding='UTF8') as MyFile:
             MyFile.write(Base.to_json_string(newList))
 

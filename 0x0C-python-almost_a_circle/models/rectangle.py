@@ -13,8 +13,8 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-
     def to_dictionary(self):
+        """Constructor to dictionary"""
         nwDictionary = {}
         nwDictionary['id'] = self.id
         nwDictionary['width'] = self.width
