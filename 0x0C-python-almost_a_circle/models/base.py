@@ -19,9 +19,9 @@ class Base(object):
     def create(cls, **dictionary):
         args = []
         if cls.__name__ == "Rectangle":
-            newObj = cls(6, 8)
+            newObj = cls(1, 1)
         else:
-            newObj = cls(7)
+            newObj = cls(1)
 
         newObj.update(*args, **dictionary)
         return newObj
