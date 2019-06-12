@@ -18,13 +18,12 @@ class Base(object):
     @classmethod
     def create(cls, **dictionary):
         """ Create new object """
-        args = []
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
         else:
             dummy = cls(1)
 
-        dummy.update(*args, **dictionary)
+        dummy.update(**dictionary)
         return dummy
 
     @staticmethod
