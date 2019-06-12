@@ -38,7 +38,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """update square public method"""
-        if len(args) > 2:
+        if len(args) >= 2:
             args = list(args)
             args.insert(2, args[1])
 
