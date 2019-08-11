@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Script lists all states whose name starts with uppercase N"""
 import MySQLdb
 from sys import argv
 
