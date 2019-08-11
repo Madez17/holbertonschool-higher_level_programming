@@ -9,8 +9,8 @@ if __name__ == "__main__":
                          host="localhost",
                          db=argv[3])
     cursor = db.cursor()
-    cursor.execute("""SELECT cities.name FROM cities JOIN states ON
-                   states.id=cities.state_id
+    cursor.execute("""SELECT cities.name FROM cities INNER JOIN states ON
+                   cities.state_id=states.id
                    WHERE states.name=%s;""", (argv[4],))
     resc = cursor.fetchall()
     for iter in resc:
