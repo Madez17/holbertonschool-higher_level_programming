@@ -10,7 +10,7 @@ if __name__ == "__main__":
                          db=argv[3])
     cursor = db.cursor()
     recs = cursor.execute("""SELECT * FROM states
-                          WHERE LIKE BINARY name=%s ORDER BY id
+                          WHERE name LIKE BINARY %s ORDER BY id
                           ASC;""", (argv[4],))
     for iter in range(recs):
         print(cursor.fetchone())
