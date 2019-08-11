@@ -10,9 +10,8 @@ if __name__ == "__main__":
                          db=argv[3])
     cursor = db.cursor()
     cursor.execute("""SELECT cities.name FROM cities JOIN states ON
-                   cities.state_id = states.id
-                   WHERE states.name=%s ORDER BY cities.id
-                   ASC;""", (argv[4],))
+                   states.id=cities.state_id
+                   WHERE states.name=%s;""", (argv[4],))
     resc = cursor.fetchall()
     for iter in resc:
         if iter is not resc[len(resc) - 1]:
