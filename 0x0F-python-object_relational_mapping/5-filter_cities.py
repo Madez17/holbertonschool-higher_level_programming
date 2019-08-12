@@ -13,12 +13,9 @@ if __name__ == "__main__":
                    cities.state_id=states.id
                    WHERE states.name=%s""", (argv[4],))
     resc = cursor.fetchall()
-
-    if resc:
-        for iter in resc:
-            if iter is not resc[len(resc) - 1]:
-                print("{}".format(iter[0]), end=", ")
-            else:
-                print("{}".format(iter[0]), end="\n")
+    list_element = []
+    for iter in resc:
+    	list_element.append(iter)
+    print(", ".join(list_element))
     cursor.close()
     db.close()
