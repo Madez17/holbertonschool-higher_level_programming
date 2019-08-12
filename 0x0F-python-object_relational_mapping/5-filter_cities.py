@@ -15,7 +15,7 @@ if __name__ == "__main__":
     resc = cursor.fetchall()
     list_element = []
     for iter in resc:
-    	list_element.append(iter)
+        list_element.append(iter[0])
     print(", ".join(list_element))
     cursor.close()
     db.close()
