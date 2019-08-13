@@ -13,6 +13,6 @@ class State(Base):
 
     id = Column(Integer, primary_key=True, nullable=False,
                 autoincrement=True, unique=True)
-    name = Column(String(128), nullable=False)
     city_relation = relationship("City", cascade="all, delete-orphan",
                                  backref="state")
+    name = Column(String(128), nullable=False)
