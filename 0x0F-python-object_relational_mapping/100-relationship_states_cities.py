@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""lists all State objects from the database hbtn_0e_6_usa"""
+"""Improve the files model_city.py and model_state.py, and save them
+as relationship_city.py and relationship_state.py"""
 import sys
 from relationship_state import Base, State
 from relationship_city import City
