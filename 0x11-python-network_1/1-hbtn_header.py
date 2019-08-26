@@ -4,9 +4,9 @@
 import urllib.request
 from sys import argv
 
-url = argv[1]
 
 if __name__ == "__main__":
+    url = argv[1]
     with urllib.request.urlopen(url) as response:
         data = response.info()
-        print(data['X-Request-Id'])
+        print(data["X-Request-Id"])
