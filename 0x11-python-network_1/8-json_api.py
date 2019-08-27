@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Python script that takes in a letter and sends a POST request 
+# Python script that takes in a letter and sends a POST request
 
 import requests
 from sys import argv
