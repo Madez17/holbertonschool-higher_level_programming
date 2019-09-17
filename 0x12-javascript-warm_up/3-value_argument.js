@@ -1,7 +1,6 @@
 #!/usr/bin/node
 
-const parameter = process.argv[2];
-if (parameter === undefined) {
+if (process.argv[2] === undefined) {
   console.log('No hay');
 } else {
   console.log(process.argv[2]);
