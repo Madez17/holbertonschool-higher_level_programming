@@ -2,6 +2,6 @@
 
 const list = ['C is fun', 'Python is cool', 'Javascript is amazing'];
 
-list.forEach(function (elemento) {
-  console.log(elemento);
-});
+for (let i = 0; i < list.length; i++) {
+  console.log(list[i]);
+}
